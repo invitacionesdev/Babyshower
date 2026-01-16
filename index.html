@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Shower de Eiden Alexis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-bebe: #87CEEB;
+            --azul-claro: #E3F2FD;
+            --azul-oscuro: #1976D2;
+            --azul-suave: #B3E5FC;
+            --blanco: #FFFFFF;
+            --beige: #F5F5DC;
+            --sombra: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--azul-claro);
+            color: #333;
+            line-height: 1.6;
+            background-image: linear-gradient(rgba(227, 242, 253, 0.95), rgba(227, 242, 253, 0.95)), url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: var(--blanco);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px var(--sombra);
+            overflow: hidden;
+            position: relative;
+            border: 8px solid var(--azul-suave);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--azul-bebe), var(--azul-oscuro));
+            color: white;
+            text-align: center;
+            padding: 40px 20px 50px;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .theme-text {
+            font-size: 1.3rem;
+            color: var(--beige);
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: rgba(25, 118, 210, 0.8);
+            border-radius: 20px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .baby-name {
+            background-color: white;
+            color: var(--azul-oscuro);
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin: 20px 0 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            animation: pulse 2s infinite;
+            position: relative;
+            border: 3px solid var(--azul-bebe);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        
+        .countdown-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            margin: -25px auto 30px;
+            max-width: 850px;
+            text-align: center;
+            border: 5px solid var(--azul-suave);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .countdown-title {
+            color: var(--azul-oscuro);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+        
+        #countdown {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .countdown-item {
+            background: linear-gradient(135deg, var(--azul-bebe), var(--azul-oscuro));
+            color: white;
+            border-radius: 15px;
+            padding: 20px 15px;
+            min-width: 130px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .countdown-value {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 30px;
+        }
+        
+        .parents-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--azul-claro);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            border: 5px solid white;
+        }
+        
+        .parents-title {
+            color: var(--azul-oscuro);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .parents-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--azul-bebe);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .parent-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .parent-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .parent-icon {
+            width: 65px;
+            height: 65px;
+            background-color: var(--azul-bebe);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.8rem;
+            color: white;
+            border: 3px solid white;
+        }
+        
+        .parent-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--azul-oscuro);
+        }
+        
+        .parent-role {
+            font-size: 1rem;
+            color: #777;
+        }
+        
+        .event-details {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            border: 5px solid var(--azul-claro);
+        }
+        
+        .event-title {
+            color: var(--azul-oscuro);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .event-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--azul-bebe);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .detail-icon {
+            width: 55px;
+            height: 55px;
+            background-color: var(--azul-claro);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--azul-oscuro);
+            font-size: 1.4rem;
+            border: 3px solid white;
+        }
+        
+        .detail-text {
+            font-size: 1.15rem;
+        }
+        
+        .salon-name {
+            color: var(--azul-oscuro);
+            font-weight: 700;
+        }
+        
+        .location-container {
+            padding: 0 30px 30px;
+            text-align: center;
+        }
+        
+        .location-title {
+            color: var(--azul-oscuro);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .location-box {
+            background-color: var(--azul-claro);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            border: 5px solid white;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .location-icon {
+            font-size: 3.5rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .location-text {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        .map-link {
+            display: inline-block;
+            background-color: var(--azul-oscuro);
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-link:hover {
+            background-color: var(--azul-bebe);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        footer {
+            background-color: var(--azul-oscuro);
+            color: white;
+            text-align: center;
+            padding: 40px 30px;
+            margin-top: 20px;
+        }
+        
+        .footer-text {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .bear-icon {
+            font-size: 1.8rem;
+            margin: 0 5px;
+        }
+        
+        .bear-divider {
+            text-align: center;
+            margin: 20px 0;
+            color: var(--azul-oscuro);
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .theme-text {
+                font-size: 1.1rem;
+            }
+            
+            .baby-name {
+                font-size: 1.9rem;
+                padding: 12px 30px;
+            }
+            
+            .countdown-item {
+                min-width: 105px;
+                padding: 15px 10px;
+            }
+            
+            .countdown-value {
+                font-size: 2.2rem;
+            }
+            
+            .info-section {
+                padding: 20px;
+                gap: 20px;
+            }
+            
+            .location-container {
+                padding: 0 20px 25px;
+            }
+            
+            .map-link {
+                padding: 12px 25px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .baby-name {
+                font-size: 1.7rem;
+                padding: 10px 25px;
+            }
+            
+            .countdown-item {
+                min-width: 85px;
+                padding: 12px 8px;
+            }
+            
+            .countdown-value {
+                font-size: 1.8rem;
+            }
+            
+            .location-icon {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Baby Shower</h1>
+            <div class="theme-text">Temática: Ositos <span class="bear-icon">🧸</span></div>
+            <p class="subtitle">Con amor estamos esperando la llegada de</p>
+            <div class="baby-name">Eiden Alexis</div>
+            <p class="subtitle">Únete a nosotros para celebrar este momento especial</p>
+        </div>
+        
+        <div class="countdown-container">
+            <h2 class="countdown-title">Faltan para el gran día:</h2>
+            <div id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bear-divider">
+            <span class="bear-icon">💙</span>
+        </div>
+        
+        <div class="info-section">
+            <div class="parents-info">
+                <h2 class="parents-title">Con amor de</h2>
+                <div class="parent-card">
+                    <div class="parent-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div>
+                        <div class="parent-name">Evelin Areli</div>
+                        <div class="parent-role">Mamá</div>
+                    </div>
+                </div>
+                <div class="parent-card">
+                    <div class="parent-icon">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <div>
+                        <div class="parent-name">Kevin Alexis</div>
+                        <div class="parent-role">Papá</div>
+                    </div>
+                </div>
+                <div class="parent-card">
+                    <div class="parent-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div>
+                        <div class="parent-name">Eiden Alexis</div>
+                        <div class="parent-role">Nuestro bebé</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="event-details">
+                <h2 class="event-title">Detalles del Evento</h2>
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <div class="detail-text">
+                        <strong>Fecha:</strong> 14 de Marzo de 2026
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="detail-text">
+                        <strong>Hora:</strong> 4:00 PM
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="detail-text">
+                        <strong>Lugar:</strong> Salón de Eventos <span class="salon-name">"Bely"</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <span class="bear-icon">🧸</span>
+                    </div>
+                    <div class="detail-text">
+                        <strong>Temática:</strong> Azul y Ositos
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="detail-text">
+                        <strong>Mesa de regalos:</strong> Cualquiera es bienvenido
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bear-divider">
+            <span class="bear-icon">🧸</span>
+        </div>
+        
+        <div class="location-container">
+            <h2 class="location-title">Ubicación del Evento</h2>
+            <div class="location-box">
+                <i class="fas fa-map-marked-alt location-icon"></i>
+                <p class="location-text">El evento se llevará a cabo en el Salón de Eventos "Bely"</p>
+                <p class="location-text">Para ver la ubicación exacta en Google Maps y obtener indicaciones:</p>
+                <a href="https://maps.app.goo.gl/MTxyDpBsomnoj9MJ6" target="_blank" class="map-link">
+                    <i class="fas fa-external-link-alt"></i> Haz clic aquí para ver la ubicación
+                </a>
+                <p class="location-text" style="margin-top: 15px; font-size: 1rem; color: #666;">
+                    <i class="fas fa-info-circle"></i> Se abrirá Google Maps en una nueva ventana
+                </p>
+            </div>
+        </div>
+        
+        <footer>
+            <p class="footer-text">¡Esperamos compartir este momento especial contigo!</p>
+            <p class="footer-text">Por favor, confirma tu asistencia antes del 7 de marzo de 2026</p>
+            <p class="footer-text">Vestimenta sugerida: Azul o blanco</p>
+            <p class="footer-text">Para confirmar asistencia, contacta a Evelin o Kevin directamente</p>
+            <div style="margin-top: 25px;">
+                <span class="bear-icon">🧸</span> <span class="bear-icon">💙</span> <span class="bear-icon">👶</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Configuración de la fecha del evento - 14 de marzo de 2026
+        const eventDate = new Date('March 14, 2026 16:00:00').getTime();
+        
+        // Función para actualizar el contador regresivo
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+            
+            if (timeLeft < 0) {
+                document.getElementById('countdown').innerHTML = `
+                    <div style="font-size: 1.8rem; color: var(--azul-oscuro); padding: 20px;">
+                        <i class="fas fa-baby" style="font-size: 2.5rem; color: var(--azul-bebe);"></i><br>
+                        <strong>¡El baby shower de Eiden Alexis está en curso!</strong><br>
+                        <span style="font-size: 1.1rem;">Gracias por ser parte de este momento especial</span>
+                    </div>
+                `;
+                return;
+            }
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+            
+            // Cambiar color cuando falten menos de 24 horas
+            if (days === 0) {
+                document.querySelectorAll('.countdown-item').forEach(item => {
+                    item.style.background = 'linear-gradient(135deg, #FF6B6B, #FF8E53)';
+                });
+            }
+        }
+        
+        // Actualizar el contador cada segundo
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // Efecto de animación para los elementos de la página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de aparición para las secciones
+            const sections = document.querySelectorAll('.parents-info, .event-details, .countdown-container, .location-box');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(section);
+            });
+            
+            // Efecto especial para el contador
+            const countdownItems = document.querySelectorAll('.countdown-item');
+            countdownItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
